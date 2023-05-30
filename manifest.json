@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "DevTools Copy",
+  "version": "1.0",
+  "description": "Copy content from DevTools Application tab and return it for saving",
+  "permissions": [
+    "tabs",
+    "storage",
+    "devtools",
+    "background"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "devtools_page": "devtools.html"
+}
