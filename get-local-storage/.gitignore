@@ -1,0 +1,15 @@
+# Ignore build artifacts
+node_modules/
+dist/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore other files
+*.DS_Store

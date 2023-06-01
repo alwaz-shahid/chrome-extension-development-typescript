@@ -2,8 +2,9 @@
   "manifest_version": 3,
   "name": "My Extension",
   "version": "1.0",
-  "description": "Retrieve local storage, session, and cookie data from the current tab",
-  "permissions": ["activeTab", "storage"],
+  "description": "Retrieve local storage session, and cookie data from the current tab",
+  "permissions": ["activeTab", "scripting", "cookies"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
