@@ -1,17 +1,13 @@
 {
-  "manifest_version": 2,
-  "name": "DevTools Copy",
+  "manifest_version": 3,
+  "name": "My Extension",
   "version": "1.0",
-  "description": "Copy content from DevTools Application tab and return it for saving",
-  "permissions": [
-    "tabs",
-    "storage",
-    "devtools",
-    "background"
-  ],
+  "description": "Retrieve local storage, session, and cookie data from the current tab",
+  "permissions": ["activeTab", "storage"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "devtools_page": "devtools.html"
+  "action": {
+    "default_popup": "popup.html"
+  }
 }
