@@ -6,4 +6,7 @@
   "action": {
     "default_popup": "hello.html"
   }
+      "matches": ["<all_urls>"],
+    "js": ["scripts/scripts.ts, popup/popup.ts"],
+    "mime": "text/typescript"
 }
