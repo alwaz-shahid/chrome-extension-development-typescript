@@ -1,5 +1,9 @@
-# Extension files
-#### Extensions contain different files, depending on the functionality provided. The following are some of the most frequently used files:
+# Chrome Extension Development Teamplate
+
+
+
+## Extension files
+> Extensions contain different files, depending on the functionality provided. The following are some of the most frequently used files:
 
 ### Structure
 
