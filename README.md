@@ -53,3 +53,62 @@ here's a list of some of the key changes and migrations from Manifest V2 to V3 i
 
 - DeclarativeNetRequest: 
 > In Manifest V2, extensions could use the DeclarativeNetRequest API to block or modify network requests. In Manifest V3, this API has been replaced with a new declarativeNetRequest API.
+
+
+
+### The following code shows the supported manifest keys. For additional usage information and code samples, visit the link of each key.
+```
+{
+  // Required
+  "manifest_version": 3,
+  "name": "My Extension",
+  "version": "1.0.1",
+
+  // Recommended
+  "action": {...},
+  "default_locale": "en",
+  "description": "A plain text description",
+  "icons": {...},
+
+  // Optional
+  "author": "developer@example.com",  
+  "automation": {...},
+  "background": {...},
+  "chrome_settings_overrides": {...},
+  "chrome_url_overrides": {...},
+  "commands": {...},
+  "content_scripts": [{...}],
+  "content_security_policy": {...},
+  "cross_origin_embedder_policy": {...},
+  "cross_origin_opener_policy": {...},
+  "declarative_net_request": {...},
+  "devtools_page": "devtools.html",
+  "event_rules": [{...}],
+  "export": {...},
+  "externally_connectable": {...},
+  "file_browser_handlers": [...],
+  "file_system_provider_capabilities": {...},
+  "homepage_url": "https://path/to/homepage",
+  "host_permissions": [...],
+  "import": [{...}],
+  "incognito": "spanning, split, or not_allowed",
+  "input_components": [{...}],
+  "key": "publicKey",
+  "minimum_chrome_version": "107",
+  "oauth2": {...},
+  "omnibox": {...},
+  "optional_host_permissions": ["..."],
+  "optional_permissions": ["..."],
+  "options_page": "options.html",
+  "options_ui": {...},
+  "permissions": ["..."],
+  "requirements": {...},
+  "sandbox": {...},
+  "short_name": "Short Name",
+  "side_panel": {...},
+  "storage": {...},
+  "tts_engine": {...},
+  "update_url": "https://path/to/updateInfo.xml",
+  "version_name": "1.0 beta",
+  "web_accessible_resources": [...]
+}```
