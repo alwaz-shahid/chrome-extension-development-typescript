@@ -54,6 +54,14 @@ here's a list of some of the key changes and migrations from Manifest V2 to V3 i
 - DeclarativeNetRequest: 
 > In Manifest V2, extensions could use the DeclarativeNetRequest API to block or modify network requests. In Manifest V3, this API has been replaced with a new declarativeNetRequest API.
 
+### Manifest V3
+> Starting June 1st, 2023, Chromium-based browsers like Chrome began enforcing stricter guidelines for extension manifest files. This means many legacy manifests will stop working once upgraded to M3 format, rendering affected extensions useless unless updated accordingly. Major changes include modifications to the following fields:
+
+- name: Maximum length reduced to 50 characters.
+- description: Maximum length extended to 1000 characters for detailed explanations about extension utility, features, benefits, installation instructions, support contact information, and screenshots. Providing clear descriptions makes it easier for potential users to decide whether they want your extension.
+- icons: Scalar values adjusted to png, jpg, jpeg, bmp | required size dimensions increased: manifest_version == 3: <48x48> | <72x72> | <96x96> | <128x128>; <64x64> <75%> | <96x96> <87.5%> | <128x128> <75%>. Now supporting multiple icon sizes accommodates crisp representations across various form factors, user interfaces, resolution scales, and pixel densities. Each image's aspect ratio remains locked at 1:1, but dimensions increase consistently based on maximum sizes specified, resulting in five permutations depending on desired level of detail requested. Adjusting icons according to these constraints leads to improved visibility throughout all phases of the software lifecycle.
+- permissions: Revised structure reduces complexity when requesting multiple API calls; removes ambiguity regarding overlapping and redundant entries; groups items more logically based on intended use cases. Access is granted based upon declared dependencies among categories, leading to more granular control over installed functionality and corresponding impacts on browsing sessions. Since permissions apply to both the manifest owner and external contributors, carefully analyzing each item minimizes unwanted exposure risks.
+contentSecurityPolicy: Introduced as a whitelist mechanism that restricts URLs, hosts, scripts, stylesheets, frame ancestors, media types, connectivity endpoints, and inline flash embeds; controls HTTPS behavior based on SSL certificate validation. Implementing more secure policies safeguards against cross-site scripting attacks, clickjacking attempts, malicious AJAX payloads, mixed content injection vulnerabilities, and iframe abuse, ensuring improved safety and reliability for end-users. For example, adding "script-src 'self';" only allows loading JavaScript assets from the same origin as your extension itself. Alternatively, setting the default 
 
 
 ### The following code shows the supported manifest keys. For additional usage information and code samples, visit the link of each key.
@@ -112,3 +120,5 @@ here's a list of some of the key changes and migrations from Manifest V2 to V3 i
   "version_name": "1.0 beta",
   "web_accessible_resources": [...]
 }```
+
+
